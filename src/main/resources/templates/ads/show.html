@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<head th:replace="partials :: head ('Viewing an Ad')">
+</head>
+<body class="main-bg main-container">
+<nav th:replace="partials :: navbar"></nav>
+<main class="container">
+    <div>
+        <h1 th:text="${ad.title}"></h1>
+        <p th:text="${ad.description}"></p>
+        <p>Ad posted by: <span th:text="${ad.user.username}"></span></p>
+    </div>
+</main>
+<footer th:replace="partials :: footer"></footer>
+<div th:replace="partials :: boot-scripts"></div>
+</body>
+</html>

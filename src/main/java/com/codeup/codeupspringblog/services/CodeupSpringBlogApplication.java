@@ -1,4 +1,4 @@
-package com.codeup.codeupspringblog;
+package com.codeup.codeupspringblog.services;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -13,22 +13,5 @@ public class CodeupSpringBlogApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(CodeupSpringBlogApplication.class, args);
 	}
-	@Controller
-	static
-	class HelloController {
-
-		@GetMapping("/hello")
-		@ResponseBody
-		public String hello() {
-			return "Hello from Spring!";
-		}
-	}
-
-	@GetMapping("/hello/{name}")
-	@ResponseBody
-	public String sayHello(@PathVariable String name) {
-		return "Hello " + name + "!";
-	}
-
 
 }

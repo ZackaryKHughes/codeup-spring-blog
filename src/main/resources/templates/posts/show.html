@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<head th:replace="partials :: head ('Viewing a Post')">
+    <title>Prolonged Fart Noises</title>
+</head>
+<body class="main-bg main-container">
+<nav th:replace="partials :: navbar"></nav>
+<header th:replace="partials :: header(${post.title})"></header>
+<main class="container">
+    <div>
+        <h3>Posted by <span th:text="${post.user.email}"></span></h3>
+        <p th:text="${post.body}"></p>
+        <a th:href="@{/posts/{id}/edit(id=${post.id})}">Edit Post</a>
+    </div>
+</main>
+<footer th:replace="partials :: footer"></footer>
+<div th:replace="partials :: boot-scripts"></div>
+</body>
+</html>
